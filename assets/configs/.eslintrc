@@ -1,0 +1,29 @@
+// Refer to https://dev.to/sophiabrandt/format-and-fix-all-files-with-prettier-and-eslint-recursively-1gld
+{
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": ["prettier", "react"],
+  "extends": ["prettier", "eslint:recommended", "plugin:react/recommended"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/prop-types": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }]
+  },
+  "settings": {
+    "react": {
+      "version": "detetect"
+    }
+  }
+}
